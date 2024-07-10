@@ -1,4 +1,4 @@
-package com.example.cronometro.models
+package com.example.cronometro.modelos
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -13,5 +13,6 @@ data class Cronometro(
     val title: String,
     @ColumnInfo(name = "cronometro")
     val cronometro: Long
+
 
 )

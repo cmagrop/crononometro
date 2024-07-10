@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.example.cronometro.models.Cronometro
+import com.example.cronometro.modelos.Cronometro
 import kotlinx.coroutines.flow.Flow
 
 @Dao  //Data Access Object
