@@ -10,7 +10,7 @@ import com.example.cronometro.R
 import com.example.cronometro.viewModels.CronometroViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

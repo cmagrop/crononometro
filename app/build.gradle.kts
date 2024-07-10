@@ -55,16 +55,16 @@ dependencies {
 
 
     // Room
-    val room_version = "2.6.1"
+
     implementation(libs.androidx.room.ktx)
 
 
     //  Dagger Hilt
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    kapt("com.google.dagger:hilt-compiler:2.51.1")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
 
     //Navigation
-    val nav_version = "2.5.3"
+
     implementation(libs.androidx.navigation.compose)
 
     // Swipe
