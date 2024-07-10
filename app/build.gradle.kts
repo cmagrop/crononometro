@@ -3,9 +3,10 @@ import org.jetbrains.kotlin.commonizer.OptimisticNumberCommonizationEnabledKey.a
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    kotlin("kapt")
+    id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
+
 }
 
 android {
@@ -60,8 +61,8 @@ dependencies {
 
 
     //  Dagger Hilt
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    //implementation(libs.hilt.android)
+    //kapt(libs.hilt.compiler)
 
     //Navigation
 
@@ -74,6 +75,12 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
     //nuevas
+
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+
+    implementation("com.google.dagger:hilt-android:2.44")
 
 
 

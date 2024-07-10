@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+
+        android:name=".CronometroApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,7 +15,7 @@
         android:theme="@style/Theme.Cronometro"
         tools:targetApi="31">
         <activity
-            android:name=".vistas.MainActivity"
+            android:name="com.example.cronometro.vistas.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,6 +1,7 @@
 package com.example.cronometro.vistas
 
 import android.os.Bundle
+import androidx.activity.ComponentActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -10,8 +11,8 @@ import com.example.cronometro.R
 import com.example.cronometro.viewModels.CronometroViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-
-class MainActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val cronometroVM: CronometroViewModel by viewModels()
