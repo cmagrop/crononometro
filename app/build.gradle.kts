@@ -77,12 +77,16 @@ dependencies {
     //nuevas
 
     implementation("com.google.dagger:hilt-android:2.44")
+
+
+
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 
 
     implementation("com.google.dagger:hilt-android:2.44")
 
-
+    //Material Design 3
+    implementation(libs.androidx.material3.android)
 
     //ya existen
     implementation(libs.androidx.core.ktx)
