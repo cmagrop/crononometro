@@ -21,7 +21,9 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.cronometro.componentes.BotonFlotante
+import com.example.cronometro.componentes.CronCard
 import com.example.cronometro.componentes.TituloPrincipal
+import com.example.cronometro.componentes.formatoTiempo
 import com.example.cronometro.viewModels.CronometroViewModel
 import me.saket.swipe.SwipeAction
 import me.saket.swipe.SwipeableActionsBox
@@ -42,7 +44,7 @@ fun HomeView(navController: NavController,cronometroViewModel: CronometroViewMod
         },
         floatingActionButton = {
             BotonFlotante {
-                navController.navigate("agregarVista")
+                navController.navigate("agregarView")
             }
         }
     )
@@ -73,6 +75,14 @@ fun ContentHomeView(it: PaddingValues,
                 )
 
                 SwipeableActionsBox(endActions = listOf(eliminar), swipeThreshold = 270.dp ) {
+
+                    CronCard(item.title,formatoTiempo(item.cronometro) ) {
+
+                        navController.navigate("EditarView/${item.id}")
+
+                    }
+
+
 
                 }
 
