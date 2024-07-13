@@ -3,9 +3,9 @@ import org.jetbrains.kotlin.commonizer.OptimisticNumberCommonizationEnabledKey.a
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
-    id("org.jetbrains.kotlin.plugin.compose") version "2.0.0"
 
 }
 
@@ -44,11 +44,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "1.8"
     }
 }
 
@@ -60,10 +60,6 @@ dependencies {
     implementation(libs.androidx.room.ktx)
 
 
-    //  Dagger Hilt
-    //implementation(libs.hilt.android)
-    //kapt(libs.hilt.compiler)
-
     //Navigation
 
     implementation(libs.androidx.navigation.compose)
@@ -74,16 +70,10 @@ dependencies {
     //Lifecycle
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
-    //nuevas
+    //Hilt
 
-    implementation("com.google.dagger:hilt-android:2.44")
-
-
-
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
-
-
-    implementation("com.google.dagger:hilt-android:2.44")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 
     //Material Design 3
     implementation(libs.androidx.material3.android)
@@ -98,4 +88,11 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+
+
+
+}
+
+kapt {
+    correctErrorTypes = true
 }
