@@ -54,6 +54,10 @@ android {
 
 dependencies {
 
+    //Preview Compose
+
+    debugImplementation("androidx.compose.ui:ui-tooling:1.6.8")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.6.8")
 
     // Room
 
@@ -96,3 +100,4 @@ dependencies {
 kapt {
     correctErrorTypes = true
 }
+

@@ -20,7 +20,7 @@ object AppModule {
     {
         return cronometroDatabase.cronometroDAO()
 
-    }
+    }//retornar consultas SQL
 
     @Singleton
     @Provides
@@ -30,7 +30,7 @@ object AppModule {
             context,
             CronometroDatabase::class.java,
             "cronometro_db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration().build() //retorna una instancia de Room y la configuracion de la base de datos
 
     }
 

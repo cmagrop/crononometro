@@ -13,12 +13,17 @@ import androidx.navigation.NavController
 import com.example.cronometro.componentes.BotonIconoPrincipal
 import com.example.cronometro.componentes.TituloPrincipal
 import com.example.cronometro.viewModels.CronometroViewModel
+import com.example.cronometro.viewModels.CronosViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 
 //declaracion incompleta
 @Composable
-fun agregarVista(navController: NavController,cronometroViewModel: CronometroViewModel)
+fun agregarView(
+    navController: NavController,
+    cronometroViewModel: CronometroViewModel,
+    cronosViewModel: CronosViewModel
+)
 {
     Scaffold (
         topBar = {
@@ -56,5 +61,7 @@ fun agregarVista(navController: NavController,cronometroViewModel: CronometroVie
 
 @Composable
 fun ContentAddView(it: PaddingValues, navController: NavController, cronometroViewModel: CronometroViewModel) {
+
+
 
 }

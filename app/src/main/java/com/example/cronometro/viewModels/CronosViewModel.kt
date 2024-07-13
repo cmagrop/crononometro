@@ -27,6 +27,7 @@ class CronosViewModel
 
     var tiempo by mutableStateOf(0L)
 
+
     fun obtenerCronometroPorId(id:Int) {
         viewModelScope.launch(Dispatchers.IO) {
 

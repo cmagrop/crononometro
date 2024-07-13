@@ -1,15 +1,20 @@
 package com.example.cronometro.navegation
 
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.cronometro.viewModels.CronometroViewModel
+import com.example.cronometro.viewModels.CronosViewModel
 import com.example.cronometro.vistas.HomeView
+import com.example.cronometro.vistas.agregarView
+import com.example.cronometro.vistas.editarView
 
 //incompleto
 @Composable
-fun navManager(cronometroViewModel: CronometroViewModel)
+fun navManager(cronosViewModel: CronosViewModel, cronometroViewModel: CronometroViewModel)
 {
     val navController = rememberNavController()
     NavHost(
@@ -25,11 +30,19 @@ fun navManager(cronometroViewModel: CronometroViewModel)
 
         composable("AgregarView")
         {
-            //AgregarView
+
+            agregarView(navController, cronometroViewModel,cronosViewModel)
         }
 
-        composable("EditarVista/{id}")
+        composable("EditarView/{id}", arguments = listOf(
+            navArgument("id"){
+                type= NavType.IntType
+            }
+        ))
         {
+
+            val id=0
+            editarView(navController,cronometroViewModel,cronosViewModel,id)
 
         }
 
