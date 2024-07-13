@@ -13,6 +13,7 @@ data class Cronometro(
     val title: String,
     @ColumnInfo(name = "cronometro")
     val cronometro: Long
+    //cronometro: sera el contador de los milisegundos
 
 
 )
