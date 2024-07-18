@@ -54,6 +54,7 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.ui.tooling.preview.android)
     //Preview Compose
 
     debugImplementation("androidx.compose.ui:ui-tooling:1.6.8")

@@ -9,9 +9,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import kotlinx.coroutines.FlowPreview
 
 
 @Composable
+@FlowPreview
 fun BotonFlotante(onClick: ()->Unit)
 {
     FloatingActionButton( onClick = onClick,
