@@ -41,7 +41,7 @@ fun navManager(cronosViewModel: CronosViewModel, cronometroViewModel: Cronometro
         ))
         {
 
-            val id=0
+            val id =  it.arguments?.getInt("id")?:0
             editarView(navController,cronometroViewModel,cronosViewModel,id)
 
         }

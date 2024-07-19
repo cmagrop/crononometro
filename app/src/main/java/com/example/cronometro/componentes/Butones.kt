@@ -13,7 +13,7 @@ import kotlinx.coroutines.FlowPreview
 
 
 @Composable
-@FlowPreview
+
 fun BotonFlotante(onClick: ()->Unit)
 {
     FloatingActionButton( onClick = onClick,
@@ -42,4 +42,7 @@ fun BotonIconoPrincipal(icono: ImageVector, onClick: () -> Unit)
 }
 
 //crear botones pendientes
+@Composable
+fun BotonCirculo(
 
+)
