@@ -18,12 +18,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.cronometro.R
 import com.example.cronometro.componentes.BotonIconoPrincipal
 import com.example.cronometro.componentes.TituloPrincipal
+import com.example.cronometro.componentes.botonCirculo
 import com.example.cronometro.componentes.formatoTiempo
 import com.example.cronometro.viewModels.CronometroViewModel
 import com.example.cronometro.viewModels.CronosViewModel
@@ -113,7 +116,16 @@ fun ContentAddView(
 
             //iniciar
 
-            CircleButton
+            botonCirculo(
+                icon = painterResource(id = R.drawable.play),
+                enabled = true
+
+            ) {
+
+                cronosViewModel.iniciar()
+
+            }
+
 
 
 
